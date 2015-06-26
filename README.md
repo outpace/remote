@@ -7,15 +7,7 @@ APIs.
 
 Add the following dependency to your `project.clj` file:
 
-```clj
-[com.outpace/remote "0.2.0"]
-```
-
-For the current snapshot use:
-
-```clj
-[com.outpace/remote "0.2.1-SNAPSHOT"]
-```
+[![Clojars Project](http://clojars.org/com.outpace/remote/latest-version.svg)](http://clojars.org/com.outpace/remote)
 
 ## DSL
 
