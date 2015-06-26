@@ -16,8 +16,6 @@
 
   :test-paths ["target/test-classes"]
 
-  :jar-exclusions [#"\.cljx"]
-
   :cljx {:builds [{:source-paths ["src"]
                    :output-path "target/classes"
                    :rules :clj}
@@ -38,10 +36,13 @@
                         :optimizations :simple
                         :pretty-print true}}]}
 
+  :jar-exclusions [#"\.cljx"]
+
   :profiles
-  {:dev {:plugins [[lein-cljsbuild "1.0.3"]
+  {:dev {:plugins [[lein-cljsbuild "1.0.6"]
                    [com.keminglabs/cljx "0.6.0"]
                    [com.cemerick/clojurescript.test "0.3.1"]]
          :prep-tasks [["cljx" "once"] "javac" "compile"]
+         :auto-clean false
          :aliases {"deploy" ["do" "clean," "cljx" "once," "deploy" "clojars"]
                    "cleantest" ["do" "clean," "cljx" "once," "test," "cljsbuild" "test"]}}})
