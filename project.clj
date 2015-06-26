@@ -1,4 +1,4 @@
-(defproject com.outpace/remote "0.3.0-SNAPSHOT"
+(defproject com.outpace/remote "0.3.0"
   :description "A Clojure(Script) library and DSL for building client to remote service APIs."
 
   :url "http://github.com/outpace/remote"
