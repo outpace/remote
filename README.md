@@ -105,6 +105,13 @@ This service can now be called with:
 (user-service :search {} {:name "bill"})
 ;; => cljs.core.async.impl.channels.ManyToManyChannel
 ```
+
+## Releasing
+
+1. Set vesion number in `project.clj` to be version you want released
+with a `-SNAPSHOT` suffix.
+1. Run `bin/release`.
+
 ## Contributors (alphabetical)
 
 - [Alex Rutkowski](https://github.com/alexmarie)
