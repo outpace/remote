@@ -14,7 +14,7 @@ function project_name {
     grep defproject project.clj | cut -f 2 -d ' '
 }
 
-
+lein clean
 lein change version leiningen.release/bump-version release
 release_version=$(version)
 tag_name="$(project_name)-v${release_version}"
