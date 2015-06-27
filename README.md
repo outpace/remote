@@ -81,7 +81,7 @@ This endpoint function can now be called with:
     ;; headers, on-request, and on-status work exactly like they do in
     ;; defendpoint. Here they are scoped to the :search endpoint. Map
     ;; values such as the ones given by headers and on-status are merged
-    ;; with the deafult values specified in the root scope of the
+    ;; with the default values specified in the root scope of the
     ;; defservice block.
     (headers {"X-Foo" nil ;; Remove the X-Foo header.
               "X-Bar" "baz"}) ;; Add the X-Bar header.
