@@ -5,44 +5,23 @@
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
-  :source-paths ["target/classes" "src"]
-
   :dependencies
-  [[org.clojure/clojure "1.6.0"]
-   [org.clojure/clojurescript "0.0-2268" :scope "provided"]
+  [[org.clojure/clojure "1.7.0"]
+   [org.clojure/clojurescript "0.0-3308" :scope "provided"]
    [org.clojure/core.async "0.1.319.0-6b1aca-alpha"]
-   [cljs-http "0.1.29"]
-   [clj-http "0.9.2"]]
-
-  :test-paths ["target/test-classes"]
-
-  :cljx {:builds [{:source-paths ["src"]
-                   :output-path "target/classes"
-                   :rules :clj}
-                  {:source-paths ["src"]
-                   :output-path "target/classes"
-                   :rules :cljs}
-                  {:source-paths ["test"]
-                   :output-path "target/test-classes"
-                   :rules :clj}
-                  {:source-paths ["test"]
-                   :output-path "target/test-classes"
-                   :rules :cljs}]}
+   [cljs-http "0.1.35"]
+   [clj-http "1.1.2"]]
 
   :cljsbuild
   {:test-commands {"unit" ["phantomjs" :runner "target/main.js"]}
-   :builds [{:source-paths ["target/classes" "target/test-classes"]
+   :builds [{:source-paths ["test"]
              :compiler {:output-to "target/main.js"
                         :optimizations :simple
                         :pretty-print true}}]}
 
-  :jar-exclusions [#"\.cljx"]
-
   :profiles
   {:dev {:plugins [[lein-cljsbuild "1.0.6"]
-                   [com.keminglabs/cljx "0.6.0"]
-                   [com.cemerick/clojurescript.test "0.3.1"]]
-         :prep-tasks [["cljx" "once"] "javac" "compile"]
+                   [com.cemerick/clojurescript.test "0.3.3"]]
          :auto-clean false
-         :aliases {"deploy" ["do" "clean," "cljx" "once," "deploy" "clojars"]
-                   "cleantest" ["do" "clean," "cljx" "once," "test," "cljsbuild" "test"]}}})
+         :aliases {"deploy" ["do" "clean," "deploy" "clojars"]
+                   "cleantest" ["do" "clean," "test" "outpace.remote.service-test," "cljsbuild" "test"]}}})
