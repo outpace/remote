@@ -9,6 +9,10 @@ Add the following dependency to your `project.clj` file:
 
 [![Clojars Project](http://clojars.org/com.outpace/remote/latest-version.svg)](http://clojars.org/com.outpace/remote)
 
+`[com.outpace/remote "0.3.1"]` is the last version that uses cljx
+instead of Clojure 1.7's reader conditionals. If you are on Clojure <
+1.7 you'll need to use this version.
+
 ## DSL
 
 ### Endpoint definitions
@@ -98,6 +102,12 @@ This service can now be called with:
 ;; => cljs.core.async.impl.channels.ManyToManyChannel
 ```
 
+## Contributing
+
+- Add message to CHANGELOG.md under top `#NEXT` section describing
+  change.
+- PRs with tests have a better chance of being accepted.
+
 ## Releasing
 
 1. Set vesion number in `project.clj` to be version you want released
@@ -112,6 +122,7 @@ with a `-SNAPSHOT` suffix.
 - [Carin Meier](https://github.com/gigasquid)
 - [Case Nelson](https://github.com/snoe)
 - [Creighton Kirkendall](https://github.com/ckirkendall)
+- [Eli Naeher](https://github.com/enaeher)
 - [Francisco Viramontes](https://github.com/kidpollo)
 - [Joel Holdbrooks](https://github.com/noprompt)
 - [Josh Headapohl](https://github.com/joshhead)
