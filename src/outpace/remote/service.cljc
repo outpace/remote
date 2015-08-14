@@ -147,13 +147,15 @@
             (let [{:keys [status] :as resp} (async/<! resp-ch)
                   status-handler (or (get on-status status)
                                      (get on-status :default)
-                                     identity)]
-              (if-let [v (status-handler resp)]
-                (async/put! out v)
-                (async/close! out)))
+                                     identity)
+                  v (status-handler resp)]
+              (when v
+                (async/put! out v)))
             (catch #?(:clj Exception :cljs js/Error) e
-                   (on-exception e)
-                   (async/close! out))))
+                   (on-exception e))
+            (finally
+              (async/close! out))))
+
         out))))
 
 ;; ---------------------------------------------------------------------
