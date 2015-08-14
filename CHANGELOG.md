@@ -1,4 +1,4 @@
-# 0.3.2
+# 0.4.0
 
 - Switch to using Clojure 1.7's reader conditionals instead of cljx.
 - Bump Clojure dependency to 1.7.
