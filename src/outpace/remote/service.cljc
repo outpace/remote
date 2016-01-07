@@ -36,7 +36,7 @@
      ([s {:keys [regex]}]
       (fn [m]
         (string/replace s regex
-                        (fn a-replace [$0 $1]
+                        (fn a-replace [[$0 $1]]
                           (let [k (keyword $1)
                                 v (get m k)]
                             (if v
