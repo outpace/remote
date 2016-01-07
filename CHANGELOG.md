@@ -1,3 +1,8 @@
+# 0.4.2
+
+- Fixed a defservice bug in CLJS where requests with params were not passing
+  params.
+
 # 0.4.0
 
 - Switch to using Clojure 1.7's reader conditionals instead of cljx.
