@@ -6,11 +6,11 @@
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
   :dependencies
-  [[org.clojure/clojure "1.7.0"]
-   [org.clojure/clojurescript "0.0-3308" :scope "provided"]
-   [org.clojure/core.async "0.1.319.0-6b1aca-alpha"]
-   [cljs-http "0.1.35"]
-   [clj-http "1.1.2"]]
+  [[org.clojure/clojure "1.8.0"]
+   [org.clojure/clojurescript "1.7.228" :scope "provided"]
+   [org.clojure/core.async "0.2.374"]
+   [cljs-http "0.1.39"]
+   [clj-http "2.1.0"]]
 
   :cljsbuild
   {:test-commands {"unit" ["phantomjs" :runner "target/main.js"]}
@@ -20,7 +20,7 @@
                         :pretty-print true}}]}
 
   :profiles
-  {:dev {:plugins [[lein-cljsbuild "1.0.6"]
+  {:dev {:plugins [[lein-cljsbuild "1.1.3"]
                    [com.cemerick/clojurescript.test "0.3.3"]]
          :auto-clean false
          :aliases {"deploy" ["do" "clean," "deploy" "clojars"]
