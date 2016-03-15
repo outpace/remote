@@ -1,3 +1,8 @@
+# 0.4.3
+
+- Upgraded dependencies (required for Clojure 1.8)
+  see https://groups.google.com/forum/#!msg/clojure/LT7vDT6fWxA/ol_BC_Fbt7MJ
+
 # 0.4.2
 
 - Fixed a defservice bug in CLJS where requests with params were not passing
