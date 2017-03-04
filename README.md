@@ -124,6 +124,7 @@ with a `-SNAPSHOT` suffix.
 - [Creighton Kirkendall](https://github.com/ckirkendall)
 - [Eli Naeher](https://github.com/enaeher)
 - [Francisco Viramontes](https://github.com/kidpollo)
+- [Jake McCrary](https://github.com/jakemcc)
 - [Joel Holdbrooks](https://github.com/noprompt)
 - [Josh Headapohl](https://github.com/joshhead)
 
